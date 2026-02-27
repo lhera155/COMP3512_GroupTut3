@@ -1,9 +1,8 @@
 <?php 
 
 try {
-    $db = new PDO("sqlite:./data/travel.db");
+    $db = new PDO("sqlite:.data/travel.db");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ATTR_ERRMODE);
-    echo "Database Connected";
 }
 catch(PDOException $e) {
     echo "Connection Failed: " . $e->getMessage();
@@ -26,6 +25,7 @@ catch(PDOException $e) {
             <option value="">All Countries</option>
             <option value="<?php  ?>"><?php  ?></option>
         </select>
+        <submit> Filter </submit>
     </form>
 </body>
 </html>
