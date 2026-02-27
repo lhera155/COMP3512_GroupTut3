@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,11 @@
     <title>Group Tutorial 3</title>
 </head>
 <body>
-    
+    <form>
+        <select name="country">
+            <option value="">All Countries</option>
+            <option value="<?php  ?>"><?php  ?></option>
+        </select>
+    </form>
 </body>
 </html>
