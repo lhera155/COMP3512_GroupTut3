@@ -1,3 +1,16 @@
+<?php 
+
+try {
+    $db = new PDO("sqlite:./data/travel.db");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ATTR_ERRMODE);
+    echo "Database Connected";
+}
+catch(PDOException $e) {
+    echo "Connection Failed: " . $e->getMessage();
+}
+
+?>
+
 
 
 <!DOCTYPE html>
