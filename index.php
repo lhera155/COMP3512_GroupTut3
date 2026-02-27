@@ -1,8 +1,9 @@
 <?php 
 
 try {
-    $db = new PDO("sqlite:.data/travel.db");
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ATTR_ERRMODE);
+    $db = new PDO("sqlite:./data/travel.db");
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Database Connected";
 }
 catch(PDOException $e) {
     echo "Connection Failed: " . $e->getMessage();
